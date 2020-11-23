@@ -1,7 +1,11 @@
 <template lang="pug">
-  div
-    label(v-if="label") {{label}}
-    slot
+  div(v-if="label")
+    hr
+    div rule是{{elForm.rules[prop]}}
+    div value是{{elForm.model[prop]}}
+    div
+      label(v-if="label") {{label}}
+      slot
 </template>
 <script>
 export default {
@@ -10,9 +14,6 @@ export default {
   props: {
     label: String,
     prop: String
-  },
-  mounted() {
-    console.log(this.elForm.rules);
   },
   validate() {}
 };

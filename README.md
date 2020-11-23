@@ -35,12 +35,12 @@ npm run serve
 
 ![el-form2](https://blog-huahua.oss-cn-beijing.aliyuncs.com/blog/code/el-form2.png)
 
-## 加入验证
+## 组件相互获取属性和事件
 
 输入的时候，应该要判断输入值是不是有效。
 
 输入是在`el-input`那边，验证是在`el-input-item`那边，那么就需要在`el-input`调用`el-input-item`的验证方法，
-但是呢，`el-input-item`必须知道**规则和值**才能验证，换言之，需要知道`el-form`。
+但是呢，`el-input-item`必须知道**规则和值**才能验证，换言之，需要知道`el-form`的信息。
 
 先考虑`el-input-item`和`el-form`。
 
