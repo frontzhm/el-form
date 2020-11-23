@@ -21,5 +21,5 @@ npm run serve
 
 先看看官网，关于`el-form`使用的`demo`，然后将重点复制到`App.vue`，再新建相应的组件文件。
 
-
+![el-form1](https://blog-huahua.oss-cn-beijing.aliyuncs.com/blog/code/el-form1.png)
 
