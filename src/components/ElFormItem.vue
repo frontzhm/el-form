@@ -1,5 +1,6 @@
 <template lang="pug">
-    div el-form-item
+  div el-form-item
+    slot
 </template>
 <script>
 export default {

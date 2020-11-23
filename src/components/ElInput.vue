@@ -1,8 +1,8 @@
 <template lang="pug">
-    div el-form-item
+    div el-input
 </template>
 <script>
 export default {
-  name: "ElFormItem"
+  name: "ElInput"
 };
 </script>
