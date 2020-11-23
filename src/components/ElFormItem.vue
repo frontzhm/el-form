@@ -15,6 +15,10 @@ export default {
     label: String,
     prop: String
   },
-  validate() {}
+  methods: {
+    validate() {
+      console.log("ElFormItem的validate");
+    }
+  }
 };
 </script>

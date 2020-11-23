@@ -42,7 +42,7 @@ npm run serve
 输入是在`el-input`那边，验证是在`el-input-item`那边，那么就需要在`el-input`调用`el-input-item`的验证方法，
 但是呢，`el-input-item`必须知道**规则和值**才能验证，换言之，需要知道`el-form`的信息。
 
-先考虑`el-input-item`和`el-form`。
+### 先考虑`el-input-item`怎么拿到`el-form`的属性
 
 这两，这个demo里是父子组件的关系，但实际上，不一定，但起码是 前辈和后代的关系。
 
@@ -50,3 +50,16 @@ npm run serve
 
 组件内部嵌套层级不确定，后代组件想要祖先组件数据的话，可考虑`provide/inject`。
 
+![el-form3](https://blog-huahua.oss-cn-beijing.aliyuncs.com/blog/code/el-form3.png)
+
+### 再考虑`el-input`怎么调用`el-input-item`的方法
+
+同理，这两，这个demo里是父子组件的关系，但实际上，不一定，但起码是 前辈和后代的关系。
+
+这里虽然也可用`provide`，但是可以试试`$parent`，毕竟一个`el-input-item`通常只有一个`el-input`。
+
+`$parent`很多时候需要用到递归，这里抛砖引玉下。
+
+![el-form4](https://blog-huahua.oss-cn-beijing.aliyuncs.com/blog/code/el-form4.png)
+
+## 加入``

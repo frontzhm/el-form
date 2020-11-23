@@ -11,6 +11,18 @@ export default {
   methods: {
     handleInput(e) {
       this.$emit("input", e.target.value);
+      this.triggerValidate();
+    },
+    triggerValidate() {
+      let parent = this.$parent;
+      while (parent) {
+        const isElFormItem = parent.$options.name === "ElFormItem";
+        if (isElFormItem) {
+          parent.validate();
+          break;
+        }
+        parent = parent.$parent;
+      }
     }
   }
 };
