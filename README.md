@@ -62,5 +62,17 @@ npm run serve
 
 ![el-form4](https://blog-huahua.oss-cn-beijing.aliyuncs.com/blog/code/el-form4.png)
 
-## 验证表单
+## 验证单个表单元素
+
+这里引入[async-validator](https://github.com/yiminghe/async-validator)，之前写过一个大概[怎么使用](https://juejin.cn/post/6897173952213942280)
+
+在`el-form-item`里已经知道`prop`/`rule`，所以引入之后，就很简单了，这边加了一个显示错误信息的属性。
+
+![el-form5](https://blog-huahua.oss-cn-beijing.aliyuncs.com/blog/code/el-form5.png)
+
+这样输入的时候，能实时验证。
+
+当用户在`App.vue`那边`elForm.validate()`的时候，`el-form`里的`validate`是对所有表单元素的`validate`进行了遍历，如果都是true，那就返回`true`，否则就是`false`。
+
+所有表单元素，其实就是`el-form-item`，综合组件通信方式，果断还是用下`$children`，这里也一样要递归拿到`el-form-item`。
 
