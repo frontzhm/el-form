@@ -1,7 +1,7 @@
 <template lang="pug">
-input(:value="value" @input="handleInput")
-
+  input(:value="value" @input="handleInput")
 </template>
+
 <script>
 export default {
   name: "ElInput",
