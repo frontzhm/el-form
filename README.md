@@ -15,6 +15,11 @@ npm run serve
 
 本文，一步步来，读者如果有耐心的话，最好也自己手敲一遍。
 
-## el-form先搭个架子
+## 搭个架子
+
+为了快捷方便，用`vue create`创建个项目，因为喜欢pug,，装个`npm i pug pug-plain-loader -D`
+
+先看看官网，关于`el-form`使用的`demo`，然后将重点复制到`App.vue`，再新建相应的组件文件。
+
 
 

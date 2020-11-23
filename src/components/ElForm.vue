@@ -3,6 +3,6 @@
 </template>
 <script>
 export default {
-    name:'el-form'
-}
+  name: "ElForm"
+};
 </script>

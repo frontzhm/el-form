@@ -21,32 +21,31 @@ export default {
     ElFormItem,
     ElInput
   },
-  data(){
+  data() {
     return {
-      formData:{},
-      rules:{
+      formData: {},
+      rules: {
         username: [
-            { required: true, message: '请输入用户名' },
-            { min: 3, max: 5, message: '长度在 3 到 5 个字符' }
-          ],
+          { required: true, message: "请输入用户名" },
+          { min: 3, max: 5, message: "长度在 3 到 5 个字符" }
+        ],
         password: [
-            { required: true, message: '请输入密码' },
-            { min: 6, max: 16, message: '长度在 6 到 16 个字符' }
-          ],
-          
+          { required: true, message: "请输入密码" },
+          { min: 6, max: 16, message: "长度在 6 到 16 个字符" }
+        ]
       }
-    }
+    };
   },
-  methods:{
-    submit(){
-      this.$refs.form.validate((valid) => {
-          if (valid) {
-            alert('submit!');
-          } else {
-            console.log('error submit!!');
-            return false;
-          }
-        });
+  methods: {
+    submit() {
+      this.$refs.form.validate(valid => {
+        if (valid) {
+          alert("submit!");
+        } else {
+          console.log("error submit!!");
+          return false;
+        }
+      });
     }
   }
 };
