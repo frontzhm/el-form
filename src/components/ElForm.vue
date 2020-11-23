@@ -1,9 +1,8 @@
 <template lang="pug">
-  div el-form
+  div
     div rules:{{rules}}
     div model:{{model}}
     slot
-    
 </template>
 <script>
 export default {
