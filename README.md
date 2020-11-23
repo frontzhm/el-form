@@ -32,3 +32,21 @@ npm run serve
 
 - 同理，`el-form-item`起码有属性`label`和`prop`，和`slot`
 - `el-input`可以`v-model`，而`v-model`是`value`和`input`的语法糖
+
+![el-form2](https://blog-huahua.oss-cn-beijing.aliyuncs.com/blog/code/el-form2.png)
+
+## 加入验证
+
+输入的时候，应该要判断输入值是不是有效。
+
+输入是在`el-input`那边，验证是在`el-input-item`那边，那么就需要在`el-input`调用`el-input-item`的验证方法，
+但是呢，`el-input-item`必须知道**规则和值**才能验证，换言之，需要知道`el-form`。
+
+先考虑`el-input-item`和`el-form`。
+
+这两，这个demo里是父子组件的关系，但实际上，不一定，但起码是 前辈和后代的关系。
+
+之前总结过，[vue组件通信方式](https://juejin.cn/post/6897143330271035399)。
+
+组件内部嵌套层级不确定，后代组件想要祖先组件数据的话，可考虑`provide/inject`。
+
