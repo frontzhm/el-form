@@ -14,9 +14,6 @@ export default {
   provide() {
     return { elForm: this };
   },
-  mounted() {
-    console.log(this);
-  },
   methods: {
     validate() {
       console.log("el-form的validate");
