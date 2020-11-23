@@ -24,3 +24,5 @@ npm run serve
 ![el-form1](https://blog-huahua.oss-cn-beijing.aliyuncs.com/blog/code/el-form1.png)
 
 ## 显示输入框
+
+观察`App.vue`，显然`el-form`起码有属性`model`和`rules`，还有个方法`validate`
