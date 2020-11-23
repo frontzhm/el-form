@@ -25,4 +25,10 @@ npm run serve
 
 ## 显示输入框
 
-观察`App.vue`，显然`el-form`起码有属性`model`和`rules`，还有个方法`validate`
+观察`App.vue`
+
+- `el-form`起码有属性`model`和`rules`，还有个方法`validate`
+- 因为`el-form-item`写在其内部，所以也肯定有`slot`
+
+- 同理，`el-form-item`起码有属性`label`和`prop`，和`slot`
+- `el-input`可以`v-model`，而`v-model`是`value`和`input`的语法糖

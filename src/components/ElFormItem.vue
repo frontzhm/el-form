@@ -1,9 +1,14 @@
 <template lang="pug">
-  div el-form-item
+  div
+    label(v-if="label") {{label}}
     slot
 </template>
 <script>
 export default {
-  name: "ElFormItem"
+  name: "ElFormItem",
+  props: {
+    label: String,
+    prop: String
+  }
 };
 </script>

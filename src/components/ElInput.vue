@@ -1,8 +1,17 @@
 <template lang="pug">
-    div el-input
+input(:value="value" @input="handleInput")
+
 </template>
 <script>
 export default {
-  name: "ElInput"
+  name: "ElInput",
+  props: {
+    value: String
+  },
+  methods: {
+    handleInput(e) {
+      this.$emit("input", e.target.value);
+    }
+  }
 };
 </script>
